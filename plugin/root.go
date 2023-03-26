@@ -33,5 +33,8 @@ func newRootCmd(descriptor *PluginDescriptor) *cobra.Command {
 		newInfoCmd(descriptor),
 	)
 
+	// Disable footers in docs generated
+	cmd.DisableAutoGenTag = true
+
 	return cmd
 }
